@@ -1,3 +1,9 @@
 module.exports = function check(str, bracketsConfig) {
-  // your solution
+    
+    let arr=str.split("");
+    if(arr.length%2!==0)return false;
+    
+    let beg=['(','[','{'];
+    let end=[')',']','}'];
+    
 }
