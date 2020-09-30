@@ -3,8 +3,8 @@ module.exports = function check(str, bracketsConfig) {
     let arr=str.split("");
     if(arr.length%2!==0)return false;
     
-    let beg=['(','[','{'];
-    let end=[')',']','}'];
+    let beg=['(','[','{','|'];
+    let end=[')',']','}','|'];
     let st=[];
     
     for(let i=0;i<arr.length;i++)
