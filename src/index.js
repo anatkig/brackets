@@ -5,8 +5,14 @@ module.exports = function check(str, bracketsConfig) {
     
     let beg=['(','[','{'];
     let end=[')',']','}'];
+    let st=[];
     
-    for(let i=0;i<arr.length/2;i++)
-        for(let y=0;y<beg.length;y++)
-            if(arr[i]===end[y]) return false;
+    for(let i=0;i<arr.length;i++)
+     if(beg.indexOf(arr[i])>-1)
+         st.push(arr[i])
+    else if(end.indexOf(arr[i])>-1)
+       if( beg.indexOf(st.pop())!==end.indexOf(arr[i])) return false;
+    
+    
+    return true;
 }
